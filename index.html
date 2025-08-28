@@ -1,36 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Jadwal Pelajaran X.1 - SMAN 2 Mandau</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jadwal Pelajaran (Senin - Jumat)</title>
+  <!-- Memuat font Choco Cooky dari Google Fonts (jika tersedia) -->
+  <link href="https://fonts.googleapis.com/css2?family=Choco+Cooky&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="schedule-container">
-    <header class="schedule-header">
-      <h1>Jadwal Pelajaran Kelas X.1</h1>
-      <p>SMAN 2 Mandau TP 2025 - 2026</p>
-    </header>
-    <section class="schedule-table-shape">
-      <table class="schedule-table" id="schedule-table">
-        <thead>
-          <tr>
-            <th>No</th>
-            <th>Hari</th>
-            <th>Jam</th>
-            <th>Mata Pelajaran</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Jadwal akan diisi oleh JS -->
-        </tbody>
-      </table>
+  <header class="site-header">
+    <h1>Jadwal Pelajaran</h1>
+    <p class="subtitle">Senin - Jumat — klik mata pelajaran untuk melihat detail</p>
+  </header>
+
+  <main class="container">
+    <section class="schedule-grid" aria-label="Jadwal pelajaran minggu ini">
+      <!-- Monday -->
+      <article class="day monday" data-day="1" aria-labelledby="mon-title">
+        <div class="day-header" id="mon-title">
+          <span class="emoji">🌞</span>
+          <h2>Senin</h2>
+        </div>
+        <ul class="periods">
+          <li tabindex="0" class="period">
+            <div class="time">07:00 - 08:00</div>
+            <div class="subject">Matematika</div>
+            <div class="details">Topik: Aljabar dasar — Soal latihan di buku halaman 12-15.</div>
+          </li>
+          <li tabindex="0" class="period">
+            <div class="time">08:15 - 09:15</div>
+            <div class="subject">Bahasa Indonesia</div>
+            <div class="details">Topik: Menulis ringkasan — Bawa buku catatan.</div>
+          </li>
+          <li tabindex="0" class="period">
+            <div class="time">09:30 - 10:30</div>
+            <div class="subject">PJOK</div>
+            <div class="details">Bawa seragam olahraga dan sepatunya.</div>
+          </li>
+        </ul>
+      </article>
+
+      <!-- Tuesday -->
+      <article class="day tuesday" data-day="2" aria-labelledby="tue-title">
+        <div class="day-header" id="tue-title">
+          <span class="emoji">🌿</span>
+          <h2>Selasa</h2>
+        </div>
+        <ul class="periods">
+          <li tabindex="0" class="period">
+            <div class="time">07:00 - 08:00</div>
+            <div class="subject">IPA</div>
+            <div class="details">Praktikum: Observasi tumbuhan — siapkan alat tulis.</div>
+          </li>
+          <li tabindex="0" class="period">
+            <div class="time">08:15 - 09:15</div>
+            <div class="subject">Bahasa Inggris</div>
+            <div class="details">Presentasi kelompok: Topik 'My Hobbies'.</div>
+          </li>
+          <li tabindex="0" class="period">
+            <div class="time">09:30 - 10:30</div>
+            <div class="subject">IPS</div>
+            <div class="details">Bab: Peta dan sumber daya alam.</div>
+          </li>
+        </ul>
+      </article>
+
+      <!-- Wednesday -->
+      <article class="day wednesday" data-day="3" aria-labelledby="wed-title">
+        <div class="day-header" id="wed-title">
+          <span class="emoji">🎨</span>
+          <h2>Rabu</h2>
+        </div>
+        <ul class="periods">
+          <li tabindex="0" class="period">
+            <div class="time">07:00 - 08:00</div>
+            <div class="subject">Seni Budaya</div>
+            <div class="details">Membuat kolase — bawa kertas bekas.</div>
+          </li>
+          <li tabindex="0" class="period">
+            <div class="time">08:15 - 09:15</div>
+            <div class="subject">TIK</div>
+            <div class="details">Latihan mengetik cepat & presentasi singkat.</div>
+          </li>
+          <li tabindex="0" class="period">
+            <div class="time">09:30 - 10:30</div>
+            <div class="subject">Agama</div>
+            <div class="details">Diskusi nilai-nilai kebajikan.</div>
+          </li>
+        </ul>
+      </article>
+
+      <!-- Thursday -->
+      <article class="day thursday" data-day="4" aria-labelledby="thu-title">
+        <div class="day-header" id="thu-title">
+          <span class="emoji">🔬</span>
+          <h2>Kamis</h2>
+        </div>
+        <ul class="periods">
+          <li tabindex="0" class="period">
+            <div class="time">07:00 - 08:00</div>
+            <div class="subject">Fisika</div>
+            <div class="details">Konsep gaya dan gerak — latihan soal.</div>
+          </li>
+          <li tabindex="0" class="period">
+            <div class="time">08:15 - 09:15</div>
+            <div class="subject">Kewirausahaan</div>
+            <div class="details">Rencana bisnis mini — bentuk kelompok.</div>
+          </li>
+          <li tabindex="0" class="period">
+            <div class="time">09:30 - 10:30</div>
+            <div class="subject">BK</div>
+            <div class="details">Sesi konseling dan pembinaan karakter.</div>
+          </li>
+        </ul>
+      </article>
+
+      <!-- Friday -->
+      <article class="day friday" data-day="5" aria-labelledby="fri-title">
+        <div class="day-header" id="fri-title">
+          <span class="emoji">🎵</span>
+          <h2>Jumat</h2>
+        </div>
+        <ul class="periods">
+          <li tabindex="0" class="period">
+            <div class="time">07:00 - 08:00</div>
+            <div class="subject">Prakarya</div>
+            <div class="details">Proyek: Kerajinan dari bahan daur ulang.</div>
+          </li>
+          <li tabindex="0" class="period">
+            <div class="time">08:15 - 09:15</div>
+            <div class="subject">Ekstra Kurikuler</div>
+            <div class="details">Pilihan: Bola, Musik, Debate.</div>
+          </li>
+          <li tabindex="0" class="period">
+            <div class="time">09:30 - 10:30</div>
+            <div class="subject">Ulangan / Evaluasi</div>
+            <div class="details">Evaluasi mingguan atau kegiatan kelas.</div>
+          </li>
+        </ul>
+      </article>
     </section>
-    <footer class="schedule-footer">
-      <span>Designed by jarrprtma | Gaya Anak Muda Kekinian</span>
-    </footer>
-  </div>
-  <script src="script.js"></script>
+  </main>
+
+  <footer class="site-footer">
+    <small>jarrprtma</small>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
